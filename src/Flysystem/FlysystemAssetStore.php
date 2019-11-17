@@ -9,7 +9,6 @@ use League\Flysystem\Exception as FlysystemException;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Util;
 use LogicException;
-use SilverStripe\Assets\File;
 use SilverStripe\Assets\FilenameParsing\FileIDHelper;
 use SilverStripe\Assets\FilenameParsing\FileResolutionStrategy;
 use SilverStripe\Assets\FilenameParsing\HashFileIDHelper;
@@ -812,7 +811,7 @@ class FlysystemAssetStore implements AssetStore, AssetStoreRouter, Flushable
             // The file is already publish
             return;
         }
-        
+
         /** @var FileHashingService $hasher */
         $hasher = Injector::inst()->get(FileHashingService::class);
 
